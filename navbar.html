@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        nav{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 12px 40px;
+            box-sizing: border-box; /* Evita que el padding aumente el ancho total */
+            background-color:azure;
+            border-bottom: 1px solid gray;
+            
+        }
+        .logo{
+            height: 26px;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        
+        }
+        nav ul li{
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size:small;
+            display: inline-block;
+        }
+        nav ul li:hover{
+            background-color: beige;
+        }
+
+        .navbar-left, .navbar-center, .navbar-right{
+            display: flex;
+            align-items: center;
+            
+        }
+        .navbar-email{
+            font-size: x-small;
+        }
+        .navbar-right ul{
+            display: flex;
+
+        }
+        img.menu{
+            margin-right: 16px;
+            display: none;
+        }
+        img.cart{
+            position: relative;
+        }
+    
+        div.number{
+            background-color: green;
+            width: 16px;
+            height: 16px;
+            font-size: xx-small;
+            color: white;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            top: 8px;
+            right: 25px;
+        }
+        @media (max-width: 640px) {
+            .navbar-center{
+                display: none;
+            }
+            .navbar-email{
+                display: none;
+            }
+            nav{
+            padding: 12px 20px;
+
+            }
+            img.menu{
+                display: block;
+            } 
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar-left">
+            <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+            <img src="./logos/logo_yard_sale.svg" alt="" class="logo">
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li>Inicio</li>
+                <li>Nosotros</li>
+                <li>Servicios</li>
+                <li>Contacto</li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">info@massuttier.com.mx</li>
+                <li><img src="./icons/icon_shopping_cart.svg" alt="" class="cart"><div class="number">2</div></li>
+        
+            </ul>
+
+        </div>
+    </nav>
+    
+</body>
+</html>
